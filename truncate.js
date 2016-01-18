@@ -4,6 +4,17 @@
 // longText (a String with several words in it)
 // numWords (an Integer that sets the number of words you want in the returned text)
 
+function truncateWords(longText, numWords){
+	var longTextArray = longText.split(' ');
+	console.log(longTextArray);
+	var length = longTextArray.length; 
+	console.log(length);
+	var shortTextArray = longTextArray.splice(0, numWords); 
+	console.log(shortTextArray);
+	var truncatedString = shortTextArray.join(' ') + ('...');
+	return truncatedString;
+}
+
 // TODO: Within the truncateWords() Function, complete the following steps:
 // 1. Use the split() function to split the String into an Array
 // 2. Use the length attribute to find the number of words in the Array
